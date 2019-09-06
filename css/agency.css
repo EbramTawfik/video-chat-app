@@ -528,8 +528,6 @@ ul.chatHistory li {
 }
 #their-video,
 #my-video {
-  width: 320px;
-  height: 480px;
   background-color: black;
 }
 #my-video {

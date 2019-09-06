@@ -1,0 +1,53 @@
+{
+  "main": "index.js",
+  "name": "video-chat",
+  "version": "0.0.0",
+  "buildVersion": "0",
+  "bundleVersion": 0,
+  "scripts": {
+    "e-start": "electron .",
+    "dist": " electron-builder build"
+  },
+  "mac": {
+    "target": "pkg",
+    "hardenedRuntime": true,
+    "bundleShortVersion": "0.0.0",
+    "bundleVersion": 0,
+    "minimumSystemVersion": "10.11",
+    "compression": "maximum",
+    "type": "distribution",
+    "darkModeSupport": true,
+    "category": "public.app-category.productivity",
+    "artifactName": "${productName}-${version}-${arch}.${ext}"
+  },
+  "dmg": {
+    "title": "${productName} ${version}",
+    "background": "build/background.png",
+    "icon": "build/icon.icns",
+    "contents": [
+      {
+        "x": 380,
+        "y": 200,
+        "type": "link",
+        "path": "/Applications"
+      },
+      {
+        "x": 110,
+        "y": 200,
+        "type": "file"
+      }
+    ],
+    "window": {
+      "width": 500,
+      "height": 500
+    }
+  },
+  "win": {
+    "target": "portable",
+    "icon": "build/icon.icns"
+  },
+  "devDependencies": {
+    "electron": "^6.0.7",
+    "electron-builder": "^21.2.0"
+  }
+}

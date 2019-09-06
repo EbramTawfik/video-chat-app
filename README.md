@@ -1,4 +1,7 @@
 # Simple Video chat app
+
+Electron version of https://github.com/valarpirai/video-chat-app 
+
 Simple one-to-one Text chat, Voice and Video call client using [**PeerJS**](http://peerjs.com).
 
 Simple P2P Text/Voice/Video chat client (Using PeerJS). Works on Chrome and Firefox, Platforms: Windows, Linux, Mac. Just open the link in Browser, You don't need any extra tools for Video Chat.
