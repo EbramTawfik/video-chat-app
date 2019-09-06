@@ -1,4 +1,4 @@
-# Simple Video chat app
+# Simple Video chat app (Electron version)
 
 Electron version of https://github.com/valarpirai/video-chat-app 
 
