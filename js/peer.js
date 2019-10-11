@@ -435,6 +435,11 @@ Negotiator.startConnection = function(connection, options) {
     }
 
     if (!util.supports.onnegotiationneeded) {
+      if(!connection.options.constraints)
+      {
+        connection.options.constraints={};
+      }
+      connection.options.constraints.offerToReceiveVideo=false;
       Negotiator._makeOffer(connection);
     }
   } else {
@@ -552,6 +557,11 @@ Negotiator._setupListeners = function(connection, pc, pc_id) {
   pc.onnegotiationneeded = function() {
     util.log('`negotiationneeded` triggered');
     if (pc.signalingState == 'stable') {
+      if(!connection.options.constraints)
+      {
+        connection.options.constraints={};
+      }
+      connection.options.constraints.offerToReceiveVideo=false;
       Negotiator._makeOffer(connection);
     } else {
       util.log('onnegotiationneeded triggered when not stable. Is another connection being established?');
